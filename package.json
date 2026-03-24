@@ -1,0 +1,10 @@
+
+{
+  "name": "carerail-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter \"./apps/**\" --parallel dev",
+    "db:push": "pnpm dotenv -e .env -- pnpm --filter @carerail/db exec prisma db push --schema ./packages/db/prisma/schema.prisma",
+    "db:generate": "pnpm --filter @carerail/db exec prisma generate"
+  }
+}

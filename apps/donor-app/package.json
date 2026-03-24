@@ -1,0 +1,11 @@
+{
+  "name": "donor-app",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@carerail/ui": "workspace:*",
+    "@carerail/core": "workspace:*",
+    "@carerail/db": "workspace:*"
+  }
+}

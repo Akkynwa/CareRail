@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  role      String
+}
+
+model Beneficiary {
+  id       String @id @default(uuid())
+  bvn      String @unique
+  userId   String
+  walletId String?
+}
+
+model Vendor {
+  id           String @id @default(uuid())
+  name         String
+  merchantCode String
+}
+
+model Project {
+  id         String @id @default(uuid())
+  name       String
+  totalFunds Float  @default(0)
+}
+
+model Voucher {
+  id            String @id @default(uuid())
+  beneficiaryId String
+  projectId     String
+  amount        Float
+  status        String
+  qrCode        String
+}
+
+model Transaction {
+  id        String @id @default(uuid())
+  voucherId String
+  vendorId  String
+  amount    Float
+}

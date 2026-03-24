@@ -1,0 +1,10 @@
+{
+  "name": "@carerail/ui",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "peerDependencies": {
+    "react": "^18",
+    "tailwindcss": "^3"
+  }
+}
