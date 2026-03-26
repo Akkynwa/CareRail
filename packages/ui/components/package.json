@@ -1,0 +1,13 @@
+{
+  "name": "@carerail/ui",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "tailwindcss": "^3.4.10"
+  }
+}

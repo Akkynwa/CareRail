@@ -4,45 +4,104 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  role      String
+model Donor {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String?
+  createdAt   DateTime @default(now())
+
+  donations   Donation[]
+  transactions Transaction[]
 }
 
 model Beneficiary {
-  id       String @id @default(uuid())
-  bvn      String @unique
-  userId   String
-  walletId String?
+  id          String   @id @default(cuid())
+  fullName    String
+  bvn         String?  @unique
+  nin         String?  @unique
+  phone       String?  @unique
+  createdAt   DateTime @default(now())
+
+  wallet       Wallet?
+  vouchers     Voucher[]
+  transactions Transaction[]
 }
 
 model Vendor {
-  id           String @id @default(uuid())
-  name         String
-  merchantCode String
+  id              String   @id @default(cuid())
+  businessName    String
+  merchantCode    String   @unique
+  category        MerchantCategory @relation(fields: [categoryId], references: [id])
+  categoryId      String
+  contactPerson   String?
+  phone           String?
+  createdAt       DateTime @default(now())
+
+  transactions Transaction[]
 }
 
-model Project {
-  id         String @id @default(uuid())
-  name       String
-  totalFunds Float  @default(0)
+model MerchantCategory {
+  id    String   @id @default(cuid())
+  name  String   @unique
+  vendors Vendor[]
+}
+
+model Wallet {
+  id             String       @id @default(cuid())
+  beneficiaryId  String       @unique
+  balance        Int          @default(0)
+  createdAt      DateTime     @default(now())
+
+  beneficiary    Beneficiary  @relation(fields: [beneficiaryId], references: [id])
+  vouchers       Voucher[]
 }
 
 model Voucher {
-  id            String @id @default(uuid())
-  beneficiaryId String
-  projectId     String
-  amount        Float
-  status        String
-  qrCode        String
+  id             String       @id @default(cuid())
+  walletId       String
+  amount         Int
+  purpose        String
+  qrCodeValue    String       @unique
+  isRedeemed     Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+  expiresAt      DateTime?
+
+  wallet         Wallet       @relation(fields: [walletId], references: [id])
+  transactions   Transaction[]
 }
 
 model Transaction {
-  id        String @id @default(uuid())
-  voucherId String
-  vendorId  String
-  amount    Float
+  id              String       @id @default(cuid())
+  donorId         String?
+  beneficiaryId   String?
+  vendorId        String?
+  voucherId       String?
+  amount          Int
+  type            TransactionType
+  createdAt       DateTime     @default(now())
+
+  donor           Donor?       @relation(fields: [donorId], references: [id])
+  beneficiary     Beneficiary? @relation(fields: [beneficiaryId], references: [id])
+  vendor          Vendor?      @relation(fields: [vendorId], references: [id])
+  voucher         Voucher?     @relation(fields: [voucherId], references: [id])
+}
+
+model Donation {
+  id          String   @id @default(cuid())
+  donorId     String
+  amount      Int
+  purpose     String
+  createdAt   DateTime @default(now())
+
+  donor       Donor    @relation(fields: [donorId], references: [id])
+}
+
+enum TransactionType {
+  DONATION
+  VOUCHER_ISSUED
+  VOUCHER_REDEEMED
+  WALLET_FUNDED
 }

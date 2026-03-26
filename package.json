@@ -1,10 +1,19 @@
-
 {
-  "name": "carerail-monorepo",
+  "name": "carerail",
+  "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@9",
   "scripts": {
-    "dev": "pnpm --filter \"./apps/**\" --parallel dev",
-    "db:push": "pnpm dotenv -e .env -- pnpm --filter @carerail/db exec prisma db push --schema ./packages/db/prisma/schema.prisma",
-    "db:generate": "pnpm --filter @carerail/db exec prisma generate"
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build --filter=...[origin/main]",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:push": "pnpm --filter @carerail/db prisma db push",
+    "db:migrate": "pnpm --filter @carerail/db prisma migrate dev",
+    "db:studio": "pnpm --filter @carerail/db prisma studio"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "typescript": "^5.6.3"
   }
 }

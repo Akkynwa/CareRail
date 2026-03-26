@@ -1,0 +1,222 @@
+carerail/
+├── apps/
+│   ├── donor/
+│   │   ├── app/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── api/
+│   │   │   │   ├── projects/
+│   │   │   │   │   └── summary/route.ts
+│   │   │   │   └── transactions/route.ts
+│   │   ├── components/
+│   │   ├── public/
+│   │   ├── next.config.js
+│   │   └── tsconfig.json
+│   │
+│   ├── beneficiary/
+│   │   ├── app/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── api/
+│   │   │   │   ├── redeem/route.ts
+│   │   │   │   └── vouchers/route.ts
+│   │   ├── components/
+│   │   ├── public/
+│   │   ├── next.config.js
+│   │   └── tsconfig.json
+│   │
+│   ├── vendor/
+│       ├── app/
+│       │   ├── layout.tsx
+│       │   ├── page.tsx
+│       │   ├── api/
+│       │   │   └── redeem/route.ts
+│       ├── components/
+│       ├── public/
+│       ├── next.config.js
+│       └── tsconfig.json
+│
+├── packages/
+│   ├── ui/
+│   │   ├── components/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── QRCode.tsx
+│   │   │   └── Navbar.tsx
+│   │   ├── index.ts
+│   │   ├── tailwind.config.js
+│   │   └── package.json
+│   │
+│   ├── core/
+│   │   ├── qr/
+│   │   │   ├── generate.ts
+│   │   │   └── scan.ts
+│   │   ├── voucher/
+│   │   │   ├── issue.ts
+│   │   │   ├── validate.ts
+│   │   │   └── redeem.ts
+│   │   ├── wallet/
+│   │   │   ├── createWallet.ts
+│   │   │   └── debitWallet.ts
+│   │   ├── kyc/
+│   │   │   └── verify.ts
+│   │   ├── index.ts
+│   │   └── package.json
+│   │
+│   ├── db/
+│   │   ├── prisma/
+│   │   │   └── schema.prisma
+│   │   ├── index.ts
+│   │   ├── seed.ts
+│   │   └── package.json
+│   │
+│   ├── auth/
+│   │   ├── jwt.ts
+│   │   ├── middleware.ts
+│   │   └── package.json
+│   │
+│   ├── config/
+│       ├── next.js
+│       ├── tailwind.js
+│       ├── eslint.js
+│       ├── tsconfig.base.json
+│       └── package.json
+│
+├── infra/
+│   ├── docker/
+│   ├── deploy/
+│   └── scripts/
+│
+├── .env
+├── turbo.json
+├── pnpm-workspace.yaml
+├── package.json
+└── tsconfig.json
+
+apps/
+└── donor-app/
+    ├── app/
+    │   ├── layout.tsx
+    │   ├── page.tsx
+    │   ├── dashboard/
+    │   │   ├── page.tsx
+    │   │   ├── DonorStats.tsx
+    │   │   ├── DonationHistory.tsx
+    │   │   └── LiveImpactFeed.tsx
+    │   ├── donations/
+    │   │   ├── new/
+    │   │   │   └── page.tsx
+    │   │   └── [id]/
+    │   │       └── page.tsx
+    │   ├── qr/
+    │   │   ├── generate/
+    │   │   │   └── page.tsx
+    │   │   └── scan/
+    │   │       ├── page.tsx
+    │   │       └── Scanner.tsx
+    │   ├── api/
+    │   │   ├── donations/
+    │   │   │   ├── route.ts
+    │   │   │   └── [donationId]/route.ts
+    │   │   ├── donors/
+    │   │   │   └── route.ts
+    │   │   ├── qr/
+    │   │   │   └── route.ts
+    │   │   └── dashboard/
+    │   │       └── live/route.ts
+    │   ├── (auth)/
+    │   │   ├── signin/page.tsx
+    │   │   └── signup/page.tsx
+    │   ├── globals.css
+    │   └── favicon.ico
+    │
+    ├── components/
+    │   ├── ui/
+    │   │   ├── Button.tsx
+    │   │   ├── Card.tsx
+    │   │   ├── Input.tsx
+    │   │   ├── GlassContainer.tsx
+    │   │   └── Spinner.tsx
+    │   ├── QRCodeDisplay.tsx
+    │   ├── DonationCard.tsx
+    │   ├── Navbar.tsx
+    │   └── Sidebar.tsx
+    │
+    ├── lib/
+    │   ├── api.ts
+    │   ├── auth.ts
+    │   ├── pusher.ts
+    │   └── qr.ts
+    │
+    ├── public/
+    │   └── logo.svg
+    │
+    ├── prisma/
+    │   └── schema.prisma
+    │
+    ├── tsconfig.json
+    ├── next.config.js
+    ├── tailwind.config.js
+    ├── postcss.config.js
+    ├── package.json
+    └── README.md
+
+    apps/beneficiary-app/
+│── app/
+│   ├── (auth)/                    # Beneficiary auth pages
+│   │   ├── signin/page.tsx
+│   │   └── signup/page.tsx
+│   │
+│   ├── (dashboard)/               # Main dashboard after sign-in
+│   │   ├── page.tsx
+│   │   ├── transactions/page.tsx
+│   │   ├── vouchers/page.tsx
+│   │   ├── wallet/page.tsx
+│   │   └── settings/page.tsx
+│   │
+│   ├── qr/
+│   │   ├── scan/page.tsx          # Scan a QR voucher to redeem
+│   │   └── history/page.tsx       # Redemption history
+│   │
+│   ├── api/
+│   │   ├── beneficiary/
+│   │   │   ├── register/route.ts  # Sign-in / Sign-up backend
+│   │   │   ├── wallet/route.ts    # Wallet info / top-up / balance
+│   │   │   ├── voucher/route.ts   # Voucher redemption
+│   │   │   └── transactions/route.ts # Beneficiary transactions
+│   │   └── live/route.ts          # SSE feed for redeemed vouchers
+│   │
+│   ├── layout.tsx
+│   └── page.tsx                    # Default landing / redirect
+│
+│── components/                     # Reusable UI
+│   ├── Navbar.tsx
+│   ├── Sidebar.tsx
+│   ├── WalletCard.tsx
+│   ├── VoucherCard.tsx
+│   ├── LiveFeedCard.tsx
+│   ├── GlassContainer.tsx
+│   └── ui/
+│       ├── Button.tsx
+│       ├── Input.tsx
+│       └── Spinner.tsx
+│
+│── context/
+│   └── BeneficiaryContext.tsx      # Global state for logged-in beneficiary
+│
+│── lib/
+│   ├── api.ts                      # Fetch wallet, transactions, voucher redemption
+│   ├── qr.ts                       # QR scanner & generator helpers
+│   └── pusher.ts                   # SSE helper
+│
+│── public/
+│   └── placeholder.png
+│
+│── styles/
+│   └── globals.css
+│
+│── tsconfig.json
+│── package.json
+│── next.config.js
+│── .env

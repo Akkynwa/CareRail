@@ -1,8 +1,0 @@
-{
-  "name": "beneficiary-app",
-  "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  }
-}

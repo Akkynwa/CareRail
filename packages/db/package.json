@@ -1,12 +1,17 @@
 {
   "name": "@carerail/db",
   "version": "1.0.0",
-  "main": "./index.ts",
-  "types": "./index.ts",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "prisma": "prisma"
+  },
   "dependencies": {
-    "@prisma/client": "latest"
+    "@prisma/client": "^5.15.0"
   },
   "devDependencies": {
-    "prisma": "latest"
+    "prisma": "^5.15.0",
+    "typescript": "^5.6.3"
   }
 }

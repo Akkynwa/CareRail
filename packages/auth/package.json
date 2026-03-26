@@ -1,0 +1,13 @@
+{
+  "name": "@carerail/auth",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "jose": "^5.2.3",
+    "@carerail/db": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
