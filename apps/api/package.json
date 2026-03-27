@@ -1,0 +1,24 @@
+{
+  "name": "carerail-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4000",
+    "build": "next build",
+    "start": "next start -p 4000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "15.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "@carerail/db": "workspace:*",
+    "@carerail/auth": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14"
+  }
+}

@@ -2,18 +2,38 @@
   "name": "carerail",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@9",
+  "packageManager": "pnpm@10.21.0",
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "build": "turbo run build --filter=...[origin/main]",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "db:push": "pnpm --filter @carerail/db prisma db push",
     "db:migrate": "pnpm --filter @carerail/db prisma migrate dev",
-    "db:studio": "pnpm --filter @carerail/db prisma studio"
+    "db:seed": "npx tsx packages/db/prisma/seed.ts",
+    "db:seed": "npx tsx packages/db/prisma/seed.ts",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^10.1.0",
+    "eslint-config-next": "^16.2.1",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
     "turbo": "^2.0.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.20",
+    "next": "15.0.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-qr-reader": "3.0.0-beta-1",
+    "swr": "^2.4.1"
   }
 }
