@@ -8,20 +8,31 @@
  */
 (self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["app/layout"],{
 
-/***/ "(app-pages-browser)/../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?server=false!":
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** ../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?server=false! ***!
-  \*******************************************************************************************************************************************************************************************/
+/***/ "(app-pages-browser)/../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CAKACHUKWU%5C%5CDocuments%5C%5Csaas_projects%5C%5Ccarerail%5C%5Capps%5C%5Cadmin%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&server=false!":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CAKACHUKWU%5C%5CDocuments%5C%5Csaas_projects%5C%5Ccarerail%5C%5Capps%5C%5Cadmin%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&server=false! ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+eval(__webpack_require__.ts("Promise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./app/globals.css */ \"(app-pages-browser)/./app/globals.css\"));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uLi8uLi9ub2RlX21vZHVsZXMvLnBucG0vbmV4dEAxNS4wLjBfQGJhYmVsK2NvcmVANy4yX2NjMThjMTkzZDQyMDc4NjM1ZmRlMTJiNjBlOTBkMjhmL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtZmxpZ2h0LWNsaWVudC1lbnRyeS1sb2FkZXIuanM/bW9kdWxlcz0lN0IlMjJyZXF1ZXN0JTIyJTNBJTIyQyUzQSU1QyU1Q1VzZXJzJTVDJTVDQUtBQ0hVS1dVJTVDJTVDRG9jdW1lbnRzJTVDJTVDc2Fhc19wcm9qZWN0cyU1QyU1Q2NhcmVyYWlsJTVDJTVDYXBwcyU1QyU1Q2FkbWluJTVDJTVDYXBwJTVDJTVDZ2xvYmFscy5jc3MlMjIlMkMlMjJpZHMlMjIlM0ElNUIlNUQlN0Qmc2VydmVyPWZhbHNlISIsIm1hcHBpbmdzIjoiQUFBQSw0SkFBNEgiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLz85NjRiIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiICovIFwiQzpcXFxcVXNlcnNcXFxcQUtBQ0hVS1dVXFxcXERvY3VtZW50c1xcXFxzYWFzX3Byb2plY3RzXFxcXGNhcmVyYWlsXFxcXGFwcHNcXFxcYWRtaW5cXFxcYXBwXFxcXGdsb2JhbHMuY3NzXCIpO1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(app-pages-browser)/../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CAKACHUKWU%5C%5CDocuments%5C%5Csaas_projects%5C%5Ccarerail%5C%5Capps%5C%5Cadmin%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&server=false!\n"));
 
+/***/ }),
+
+/***/ "(app-pages-browser)/./app/globals.css":
+/*!*************************!*\
+  !*** ./app/globals.css ***!
+  \*************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"d33478e34a25\");\nif (true) { module.hot.accept() }\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL2FwcC9nbG9iYWxzLmNzcyIsIm1hcHBpbmdzIjoiOzs7O0FBQUEsaUVBQWUsY0FBYztBQUM3QixJQUFJLElBQVUsSUFBSSxpQkFBaUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vYXBwL2dsb2JhbHMuY3NzP2EyMGEiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgXCJkMzM0NzhlMzRhMjVcIlxuaWYgKG1vZHVsZS5ob3QpIHsgbW9kdWxlLmhvdC5hY2NlcHQoKSB9XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(app-pages-browser)/./app/globals.css\n"));
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["main-app"], () => (__webpack_exec__("(app-pages-browser)/../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?server=false!")));
+/******/ __webpack_require__.O(0, ["main-app"], () => (__webpack_exec__("(app-pages-browser)/../../node_modules/.pnpm/next@15.0.0_@babel+core@7.2_cc18c193d42078635fde12b60e90d28f/node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CAKACHUKWU%5C%5CDocuments%5C%5Csaas_projects%5C%5Ccarerail%5C%5Capps%5C%5Cadmin%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&server=false!")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ _N_E = __webpack_exports__;
 /******/ }

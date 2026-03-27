@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css"; // Ensure this file exists and contains @tailwind directives
 
 export const metadata: Metadata = {
   title: "CareRail - Transparent Charitable Giving",

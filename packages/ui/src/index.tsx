@@ -1,9 +1,11 @@
-import * as React from "react";
+// packages/ui/index.ts
 
-// Re-export all components
-export * from "./components";
+// 1. Components
+export { Input } from "./components/Input"; 
+export { Button } from "./components/Button"; // Ensure this matches your file path
+export { DashboardShell } from "./components/DashboardShell";
 
-// Re-export providers
+// 2. Providers
 export * from "./providers/RootProvider";
 export * from "./providers/SessionProvider";
 export * from "./providers/SSEProvider";

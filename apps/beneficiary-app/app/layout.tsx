@@ -1,4 +1,5 @@
 import "@carerail/ui/globals.css";
+import "./globals.css"; // Ensure this file exists and contains @tailwind directives
 import { SessionProvider } from "@carerail/ui";
 import { ReactNode } from "react";
 

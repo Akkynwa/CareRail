@@ -4,7 +4,8 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Add this just in case
+    // CRITICAL: You must point to the physical location of your UI package
+    "../../packages/ui/src/**/*.{js,ts,jsx,tsx,mdx}", 
   ],
   theme: {
     extend: {},

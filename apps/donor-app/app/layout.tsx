@@ -1,4 +1,5 @@
 import "@carerail/ui/globals.css";
+import "./globals.css"; // Ensure this file exists and contains @tailwind directives
 import { ReactNode } from "react";
 import { DashboardShell } from "@carerail/ui";
 import { DonorProvider } from "../context/DonorContext";

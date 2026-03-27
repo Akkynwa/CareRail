@@ -9,7 +9,6 @@
     "db:push": "pnpm --filter @carerail/db prisma db push",
     "db:migrate": "pnpm --filter @carerail/db prisma migrate dev",
     "db:seed": "npx tsx packages/db/prisma/seed.ts",
-    "db:seed": "npx tsx packages/db/prisma/seed.ts",
     "dev": "turbo run dev",
     "build": "turbo run build",
     "start": "turbo run start"

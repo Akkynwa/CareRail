@@ -7,12 +7,12 @@
     "start": "next start -p 3003"
   },
   "dependencies": {
+    "@carerail/auth": "workspace:*",
+    "@carerail/ui": "workspace:*",
+    "lucide-react": "^1.7.0",
     "next": "^15.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@carerail/ui": "workspace:*",
-    "@carerail/auth": "workspace:*"
-  
+    "react-hot-toast": "^2.6.0"
   }
- 
 }
